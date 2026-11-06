@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oggy | Cartoon Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <button class="next-symbol">
+     <a href="buddy.html" class="next-symbol">➡️</a>
+    </button>
+    <button class="home-btn" onclick="location.href='index1.html'">🏠 Home</button>
+    <button class="back-symbol">
+     <a href="heidi.html" class="back-symbol">⬅️</a>
+    </button>
+    <h1 style="font-size:50px">Oggy and the Cockroaches</h1>
+  </header>
+  <section>
+     <div class="content">
+      <h2 style="font-style:oblique">About Oggy&Cockroages</h2>
+    <button class="btn" onclick="toggleAbout()">📖 Show About Oggy&Cockroages</button>
+
+    <div class="story-card" id="aboutOggy&Cockroages">
+      <p>
+      Oggy is a lazy cat 🐱 who loves watching TV 📺 and eating all day 🍕.<br>
+      But three cockroaches – Dee Dee, Joey, and Marky 🪳🪳🪳 – always ruin his peace 😡.<br>
+      Their fights are epic and full of madness 💥.<br>
+      Oggy sometimes wins, but mostly ends up in trouble 😂.<br>
+      Even though they fight, there are moments where they save each other 😮.<br>
+      Oggy’s cousin Jack also gets involved and adds more fun 🤯.<br>
+      There are times Oggy dreams of love ❤️ and peace but it always ends in chaos.<br>
+      The slapstick humor is legendary and never gets old 😆.<br>
+      Some episodes show Oggy's loneliness too, and we feel sad 😞.<br>
+      It’s a cartoon that shows life is unpredictable but always entertaining 🎢✨.<br>
+      </p>
+    </div>
+
+    <div class="gallery">
+  
+      <img src="ogg2.jpeg" alt="Oggy Image 1">
+      <img src="ogg3.jpeg" alt="Oggy Image 2">
+      <img src="ogg1.jpeg" alt="Oggy Image 3">
+      <img src="ogg4.jpeg" alt="Oggy Image 4">
+      <img src="ogg5.jpeg" alt="Oggy Image 5">
+      <img src="ogg6.jpeg" alt="Oggy Image 6">
+      <img src="ogg7.jpeg" alt="Oggy Image 7">
+      <img src="ogg8.jpeg" alt="Oggy Image 8">
+      <img src="oggy9.jpg" alt="Oggy Image 9">
+      <img src="oggy10.jpg" alt="Oggy Image 10">
+      <img src="oggy11.jpeg" alt="Oggy Image 11">
+      <img src="oggy12.jpeg" alt="Oggy Image 12">
+      <img src="oggy13.jpeg" alt="Oggy Image 13">
+      <img src="oggy14.jpeg" alt="Oggy Image 14">
+      <img src="oggy15.jpeg" alt="Oggy Image 15">
+    </div>
+    
+  </section>
+
+  <footer>
+    <p>Made By KONETISETTY PRASANNA</p>
+  </footer>
+  <script>
+    function toggleAbout() {
+      const aboutDiv = document.getElementById("aboutOggy&Cockroages");
+      if (aboutDiv.style.display === "block") {
+        aboutDiv.style.display = "none";
+      } else {
+        aboutDiv.style.display = "block";
+      }
+    }
+
+    const galleryImages = document.querySelectorAll('.gallery img');
+  const modal = document.createElement('div');
+  modal.classList.add('modal');
+  modal.innerHTML = '<span class="close-btn">&times;</span><img src="">';
+  document.body.appendChild(modal);
+  const modalImg = modal.querySelector('img');
+  const closeBtn = modal.querySelector('.close-btn');
+
+  galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+      modalImg.src = img.src;
+      modal.classList.add('active');
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('active');
+  });
+
+  </script>
+</body>
+</html>

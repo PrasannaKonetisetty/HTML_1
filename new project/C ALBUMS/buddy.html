@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Huddy Buddy | Cartoon Gallery</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+     <button class="next-symbol">
+     <a href="motu.html" class="next-symbol">➡️</a>
+    </button>
+    <button class="home-btn" onclick="location.href='index1.html'">🏠 Home</button>
+    <button class="back-symbol">
+     <a href="oggy.html" class="back-symbol">⬅️</a>
+    </button>
+    <h1 style="font-size:50px">Huddy Buddy - Crazy Adventures</h1>
+  </header>
+  <section>
+     <div class="content">
+      <h2 style="font-style:oblique">About Huddy-Buddy</h2>
+    <button class="btn" onclick="toggleAbout()">📖 Show About Huddy-Buddy</button>
+
+    <div class="story-card" id="aboutHuddy-Buddy">
+      <p>
+        Billy & Mandy are two strange kids who win a bet with the Grim Reaper and make him their best friend forever 😈👦👧<br>
+        Grim, the skeleton with a scythe, is forced to hang out with them—even though he doesn’t like it 😂💀<br>
+        Billy is super silly and innocent 🤪, while Mandy is scary smart and always serious 😐🧠<br>
+        Their adventures are dark, funny, and filled with creepy creatures 🧟‍♂️👽<br>
+        The cartoon mixes horror with humor, making every episode exciting and weird 😅👻<br>
+        Grim uses his magical scythe to open portals, bring back souls, and sometimes just do chores 😆⚰️<br>
+        Mandy bosses everyone around—Grim included—and she always wins her battles 💪😎<br>
+        Billy’s dumb questions and actions cause the wildest situations 🥴🌪️<br>
+        Despite all the chaos, the three share a strange bond of friendship 🤝🖤<br>
+        It’s a perfect mix of spooky, comedy, and crazy fun that fans never forget 🎃🔥<br>
+      </p>
+    </div>
+
+    <div class="gallery">
+  
+      <img src="hb1.jpeg" alt="Huddy-Buddy Image 1">
+      <img src="hb2.png" alt="Huddy-Buddy Image 2">
+      <img src="hb3.jpeg" alt="Huddy-Buddy Image 3">
+      <img src="hb7.jpeg" alt="Huddy-Buddy Image 4">
+      <img src="hb4.jpeg" alt="Huddy-Buddy Image 5">
+      <img src="hb5.jpeg" alt="Huddy-Buddy Image 6">
+      <img src="hb8.jpeg" alt="Huddy-Buddy Image 7">
+      <img src="hb6.jpeg" alt="Huddy-Buddy Image 8">
+      <img src="hb9.jpeg" alt="Huddy-Buddy Image 9">
+      <img src="hb10.jpeg" alt="Huddy-Buddy Image 10">
+      <img src="hb11.jpg" alt="Huddy-Buddy Image 11">
+      <img src="hb12.jpg" alt="Huddy-Buddy Image 12">
+      <img src="hb13.jpg" alt="Huddy-Buddy Image 13">
+      <img src="hb14.jpg" alt="Huddy-Buddy Image 14">
+      <img src="hb15.jpg" alt="Huddy-Buddy Image 15">
+    </div>
+    
+  </section>
+
+  <footer>
+    <p>Made By KONETISETTY PRASANNA</p>
+  </footer>
+  <script>
+    function toggleAbout() {
+      const aboutDiv = document.getElementById("aboutHuddy-buddy");
+      if (aboutDiv.style.display === "block") {
+        aboutDiv.style.display = "none";
+      } else {
+        aboutDiv.style.display = "block";
+      }
+    }
+
+    const galleryImages = document.querySelectorAll('.gallery img');
+  const modal = document.createElement('div');
+  modal.classList.add('modal');
+  modal.innerHTML = '<span class="close-btn">&times;</span><img src="">';
+  document.body.appendChild(modal);
+  const modalImg = modal.querySelector('img');
+  const closeBtn = modal.querySelector('.close-btn');
+
+  galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+      modalImg.src = img.src;
+      modal.classList.add('active');
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('active');
+  });
+
+  </script>
+</body>
+</html>

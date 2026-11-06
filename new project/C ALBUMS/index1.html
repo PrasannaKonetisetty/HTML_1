@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartoon Gallery</title>
+  <style>
+    @media (max-width: 768px) {
+      .gallery img {
+        width: 90%;
+      }
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: pink;
+      margin: 0;
+      padding: 0;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    header {
+      background-color: indigo;
+      color: whitesmoke;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      animation: slideDown 1.5s ease-in-out;
+    }
+
+    .back-symbol {
+      position: absolute;
+      top: 140px;
+      left: 20px;
+      font-size: 32px;
+      color: white;
+      text-decoration: none;
+      background: black;
+      padding: 8px 12px;
+      border-radius: 20px;
+      transition: background 0.3s ease;
+    }
+
+    .back-symbol:hover {
+      background: hotpink;
+    }
+
+    main {
+      padding: 20px;
+      background-color: pink;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    h2, p {
+      text-align: center;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      text-align: center;
+      width: 200px;
+      cursor: pointer;
+    }
+
+    .card img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border: 2px solid #444;
+      border-radius: 500px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, border 0.3s ease;
+      animation: zoomFade 0.8s ease-in-out forwards;
+    }
+
+    .card img:hover {
+      transform: scale(1.05);
+      border: 2px solid aqua;
+      box-shadow: 0 0 10px aqua;
+    }
+
+    .card p {
+      font-weight: bold;
+      color: #4b0082;
+    }
+
+    .quote {
+      display: none;
+      margin-top: 10px;
+      font-style: italic;
+      color: #d500f9;
+    }
+
+    .card.active .quote {
+      display: block;
+    }
+
+    footer {
+      position: fixed;
+      text-align: center;
+      background: black;
+      color: white;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px 0;
+      z-index: 1000;
+    }
+
+    .gallery img:nth-child(1) { animation-delay: 0.2s; }
+    .gallery img:nth-child(2) { animation-delay: 0.4s; }
+    .gallery img:nth-child(3) { animation-delay: 0.6s; }
+    .gallery img:nth-child(4) { animation-delay: 0.8s; }
+    .gallery img:nth-child(5) { animation-delay: 1s; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes zoomFade {
+      from { transform: scale(0.5); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Back button -->
+    <a href="about.html" class="back-symbol">⬅</a>
+    <h1 style="font-size: 65px;">Welcome to the Cartoon Gallery</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>About This Website</h2>
+      <p>
+        Welcome to the <strong>Cartoon Gallery</strong> – the ultimate playground for your childhood memories! 🌈 From the mischievous pranks of <em>Shinchan</em> to the adventurous duo <em>Huddy & Buddi</em>, and the unstoppable fun of <em>Oggy, Motu Patlu, Heidi</em> and more – this site brings all your favorite characters together in one magical space.
+      </p>
+      <nav>
+        <div class="gallery">
+          <div class="card" onclick="toggleQuote(this)">
+            <a href="sinchan.html"><img src="download.jpeg" alt="Sinchan"></a>
+            <p>SINCHAN</p>
+            <div class="quote">"Shinchan’s mischief makes everyone laugh!"</div>
+          </div>
+          <div class="card" onclick="toggleQuote(this)">
+            <a href="heidi.html"><img src="Heidi.jpeg" alt="Heidi"></a>
+            <p>HEIDI</p>
+            <div class="quote">"Heidi loves nature and happiness!"</div>
+          </div>
+          <div class="card" onclick="toggleQuote(this)">
+            <a href="oggy.html"><img src="oggy.webp" alt="Oggy"></a>
+            <p>OGGY</p>
+            <div class="quote">"Oggy’s life is full of fun and chaos!"</div>
+          </div>
+          <div class="card" onclick="toggleQuote(this)">
+            <a href="buddy.html"><img src="huddybuddy.jpeg" alt="Huddy Buddy"></a>
+            <p>HUDDY-BUDDY</p>
+            <div class="quote">"Huddy Buddy spreads endless smiles!"</div>
+          </div>
+          <div class="card" onclick="toggleQuote(this)">
+            <a href="motu.html"><img src="pathulu.avif" alt="Motu Pathulu"></a>
+            <p>MOTU-PATHULU</p>
+            <div class="quote">"Motu & Patlu’s friendship wins all hearts!"</div>
+          </div>
+        </div>
+      </nav>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made By @KONETISETTY PRASANNA</p>
+  </footer>
+
+  <script>
+    function toggleQuote(card) {
+      card.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

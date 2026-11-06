@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motu Pathulu | Cartoon Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <button class="next-symbol">
+     <a href="sinchan.html" class="next-symbol">➡️</a>
+    </button>
+
+    <button class="home-btn" onclick="location.href='index1.html'">🏠 Home</button>
+    <button class="back-symbol">
+     <a href="buddy.html" class="back-symbol">⬅️</a>
+    </button>
+    <h1 style="font-size:50px">Motu Patlu - Trouble & Comedy</h1>
+  </header>
+  <section>
+     <div class="content">
+      <h2 style="font-style:oblique">About MOTU-PATHULU</h2>
+    <button class="btn" onclick="toggleAbout()">📖 Show About Motu-Pathulu</button>
+
+    <div class="story-card" id="aboutMotu-Pathulu">
+      <p>
+        Motu loves samosas 🍽️ and Patlu is the brainy one 🧠.<br>
+        They live in Furfuri Nagar and face daily adventures 🤹.<br>
+        Dr. Jhatka gives crazy gadgets and Ghasitaram says “20 years ka experience” 🤖.<br>
+        Inspector Chingam tries to catch thieves but ends up falling 😂.<br>
+        Motu gets power after eating samosas and fights bad guys 🥷.<br>
+        Their friendship is very deep – always helping each other 💪.<br>
+        Some episodes show their sadness when someone leaves town 😢.<br>
+        They even risk their lives to protect others 🛡️.<br>
+        Even villains like John the Don become funny with their actions 😆.<br>
+        It’s a cartoon full of friendship, courage, and endless fun 🎊.<br>
+      </p>
+    </div>
+    <div class="gallery">
+  
+      <img src="mp1.jpeg" alt="Motupathulu Image 1">
+      <img src="mp2.jpeg" alt="Motupathulu  Image 2">
+      <img src="mp3.jpeg" alt="Motupathulu  Image 3">
+      <img src="mp4.jpeg" alt="Motupathulu  Image 4">
+      <img src="mp5.jpeg" alt="Motupathulu  Image 5">
+      <img src="mp6.jpeg" alt="Motupathulu  Image 6">
+      <img src="mp7.jpeg" alt="Motupathulu Image7">
+      <img src="mp8.jpeg" alt="Motupathulu Image 8">
+      <img src="mp9.jpg" alt="Motupathulu Image 9">
+      <img src="mp10.jpg" alt="Motupathulu Image 10">
+      <img src="mp11.jpg" alt="Motupathulu Image 11">
+      <img src="mp12.jpg" alt="Motupathulu Image 12">
+      <img src="mp13.jpg" alt="Motupathulu Image 13">
+      <img src="mp14.jpg" alt="Motupathulu Image 14">
+      <img src="mp15.jpg" alt="Motupathulu Image 15">
+    </div>
+    
+    
+  </section>
+
+  <footer>
+    <p>Made By KONETISETTY PRASANNA</p>
+  </footer>
+  <script>
+    function toggleAbout() {
+      const aboutDiv = document.getElementById("aboutMotu-Pathulu");
+      if (aboutDiv.style.display === "block") {
+        aboutDiv.style.display = "none";
+      } else {
+        aboutDiv.style.display = "block";
+      }
+    }
+
+    const galleryImages = document.querySelectorAll('.gallery img');
+  const modal = document.createElement('div');
+  modal.classList.add('modal');
+  modal.innerHTML = '<span class="close-btn">&times;</span><img src="">';
+  document.body.appendChild(modal);
+  const modalImg = modal.querySelector('img');
+  const closeBtn = modal.querySelector('.close-btn');
+
+  galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+      modalImg.src = img.src;
+      modal.classList.add('active');
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('active');
+  });
+
+  </script>
+</body>
+</html>

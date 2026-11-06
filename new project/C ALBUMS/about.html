@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to Cartoon World</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    h1 {
+      margin-top: 40px;
+      font-size: 70px;
+      font-style: unset;
+      animation: slideDown 1.5s ease-in-out;
+    }
+    p {
+      font-size: 23px;
+      margin: 20px auto;
+      max-width: 650px;
+      line-height: 1.6;
+      animation: fadeUp 2s ease-in-out;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: hotpink;
+      color: white;
+      padding: 15px 30px;
+      font-size: 30px;
+      border: none;
+      border-radius: 25px;
+      text-decoration: none;
+      margin: 20px 10px;
+      transition: background 0.3s;
+      width: 150px;  /* same width for all buttons */
+      text-align: center; /* text center */
+      animation: zoomIn 1s ease-in-out forwards;  /* Button zoom-in */
+   
+    }
+    .btn:hover {
+      background-color: deeppink;
+    }
+    .info {
+      display: none;
+      max-width: 650px;
+      margin: 25px auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-left: 5px solid #2ecc71;
+      border-radius: 6px;
+      
+    }
+    #about-toggle:checked ~ .info {
+      display: block;
+    }
+    .btn-container {
+  text-align: center;  /* center align both buttons */
+}
+
+.btn-container .btn {
+  display: inline-block;
+  margin: 10px 150px; /* small gap between buttons */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+
+  </style>
+</head>
+<body>
+  <h1>Welcome to Cartoon World!</h1>
+  <p>
+    Cartoon World is a fun and imaginative place where kids enjoy learning, laughing, and exploring with their favorite cartoon characters. 
+    It brings the magic of imagination alive with funny adventures, heart-touching moments, and endless stories full of laughter and creativity. 
+    🎉Every character teaches fun, life lessons, and values while making us smile.
+  </p>
+   <br>
+   <br>
+   <br>
+   <br>
+  <input type="checkbox" id="about-toggle" hidden>
+  <div style="text-align: center;">
+    <a href="index.html" class="btn">Back</a>
+    <label for="about-toggle" class="btn">About Me</label>
+    <a href="index1.html" class="btn">Next</a>
+  </div>
+
+  <div class="info">
+    <h2>About Me</h2>
+    <p> Hello! I’m Prasanna, a passionate learner and creative thinker.<br>
+        I enjoy exploring technology, cartoons, and innovative ideas.<br>
+        I love solving problems and turning ideas into reality.<br>
+        I believe in learning something new every day and growing with it.
+</p>
+
+
+</body>
+</html>

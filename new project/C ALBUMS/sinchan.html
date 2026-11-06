@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shinchan | Cartoon Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <button class="next-symbol">
+     <a href="heidi.html" class="next-symbol">➡️</a>
+    </button>
+    <button class="home-btn" onclick="location.href='index1.html'">🏠 Home</button>
+    <button class="back-symbol">
+     <a href="motu.html" class="back-symbol">⬅️</a>
+    </button>
+
+    <h1 style="font-size:50px">Shinchan - Funny & Naughty</h1>
+  </header>
+  <section>
+    <div class="content">
+      <h2 style="font-style:oblique">About Sinchan</h2>
+    <button class="btn" onclick="toggleAbout()">📖 Show About Shinchan</button>
+
+    <div class="story-card" id="aboutShinchan">
+      <p>
+        Shinchan is a naughty 5-year-old kid 😜 who lives in Kasukabe, Japan 🇯🇵.<br>
+        He always disturbs his mom Misae with silly pranks 😂.<br>
+        His dog Shiro 🐶 is very loyal and always follows him everywhere.<br>
+        Shinchan loves dancing half-naked in the house 🕺.<br>
+        He cares a lot for his sister Himawari 👶 even though he irritates her.<br>
+        Sometimes, his dad Hiroshi faces funny problems because of Shinchan 🤦‍♂️.<br>
+        There are also emotional scenes when the family goes through hard times 😢.<br>
+        Shinchan supports his friends in every problem 💪.<br>
+        The show makes us laugh and also touches our heart 💖.<br>
+        It’s not just comedy – it’s childhood, friendship, and family in one cartoon 🎨👨‍👩‍👧‍👦.
+      </p>
+    </div>
+
+    <div class="gallery">
+  
+      <img src="sin1.jpg" alt="Shinchan Image 1">
+      <img src="sin2.jpg" alt="Shinchan Image 2">
+      <img src="sin3.jpeg" alt="Shinchan Image 3">
+      <img src="sin4.jpeg" alt="Shinchan Image 4">
+      <img src="sin5.png" alt="Shinchan Image 5">
+      <img src="sin6.jpeg" alt="Shinchan Image 6">
+      <img src="sin7.jpeg" alt="Shinchan Image 7">
+      <img src="sin8.png" alt="Shinchan Image 8">
+      <img src="sin9.jpg" alt="Shinchan Image 9 ">
+      <img src="sin10.png" alt="Shinchan Image 10">
+      <img src="sin11.jpg" alt="Shinchan Image 11">
+      <img src="sin12.jpg" alt="Shinchan Image 12">
+      <img src="sin13.jpg" alt="Shinchan Image 13">
+      <img src="sin14.jpg" alt="Shinchan Image 14">
+      <img src="sin15.jpg" alt="Shinchan Image 15">
+    </div>
+    
+  </section>
+
+  <footer>
+    <p>Made By KONETISETTY PRASANNA</p>
+  </footer>
+
+  <script>
+    function toggleAbout() {
+      const aboutDiv = document.getElementById("aboutShinchan");
+      if (aboutDiv.style.display === "block") {
+        aboutDiv.style.display = "none";
+      } else {
+        aboutDiv.style.display = "block";
+      }
+    }
+
+    const galleryImages = document.querySelectorAll('.gallery img');
+  const modal = document.createElement('div');
+  modal.classList.add('modal');
+  modal.innerHTML = '<span class="close-btn">&times;</span><img src="">';
+  document.body.appendChild(modal);
+  const modalImg = modal.querySelector('img');
+  const closeBtn = modal.querySelector('.close-btn');
+
+  galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+      modalImg.src = img.src;
+      modal.classList.add('active');
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('active');
+  });
+
+  </script>
+</body>
+</html>

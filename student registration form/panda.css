@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: transparent;
+  color: black;
+  padding: 0%;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 30px auto;
+  background: whitesmoke;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.step {
+  text-align: center;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.btn {
+  background: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: palevioletred;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.center {
+  text-align: center;
+}
+
+.gender-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;  /* space between Gender label and Male/Female */
+}
+
+.gender-group label {
+  display: flex;
+  align-items: center;
+  gap: 3px;  /* small space between radio button and text */
+}
+
+input[type="radio"] {
+  margin: 0; /* remove default margin */
+}
+
+/* Default (Desktop) */
+form {
+  background-color: #f9f9f9;  /* desktop background */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Mobile ki background remove */
+@media screen and (max-width: 600px) {
+  form {
+    background: none;
+    box-shadow: none;
+    padding: 0;  /* optional, removes extra padding on mobile */
+  }
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heidi | Cartoon Gallery</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <header>
+    <button class="next-symbol">
+     <a href="oggy.html" class="next-symbol" >➡️ </a>
+    </button>
+    <button class="home-btn" onclick="location.href='index1.html'">🏠 Home</button>
+    <button class="back-symbol">
+     <a href="sinchan.html" class="back-symbol">⬅️ </a>
+    </button>
+    <h1 style="font-size:50px">Heidi - Girl of the Alps</h1>
+  </header>
+  <section>
+     <div class="content">
+      <h2 style="font-style:oblique">About Heidi</h2>
+    <button class="btn" onclick="toggleAbout()">📖 Show About Heidi</button>
+
+<div class="story-card" id="aboutHeidi">
+     <p>
+       Heidi is a sweet mountain girl 🧒 who lives with her grandpa in the Alps 🏔.<br>
+      She enjoys the fresh air, goats 🐐, and beautiful nature 🌸.<br>
+      She meets Peter and they become best friends 🧒👧.<br>
+      One day, she is sent to the city to help Clara, a disabled girl ♿.<br>
+      Heidi feels sad in the city – she misses her mountains and grandpa 😢.<br>
+      But she brings joy to Clara and helps her walk again ❤.<br>
+      She finally returns home, and Clara visits too – emotional moment 🥺.<br>
+      Heidi teaches kindness, nature love, and courage 🌳💖.<br>
+      We smile when she runs on hills and cry when she’s homesick 😔.<br>
+      It’s a touching story of simplicity, strength, and pure heart 💫.
+      </p>
+    </div>
+
+     <div class="gallery">
+      <img src="heidi1.jpeg" alt="Heidi Image 1">
+      <img src="heidi2.jpeg" alt="Heidi Image 2">
+      <img src="heidi3.jpeg" alt="Heidi Image 3">
+      <img src="heidi4.jpeg" alt="Heidi Image 4">
+      <img src="heidi5.jpeg" alt="Heidi Image 5">
+      <img src="heidi6.jpeg" alt="Heidi Image 6">
+      <img src="heidi7.jpeg" alt="Heidi Image 7">
+      <img src="heidi8.jpeg" alt="Heidi Image 8">
+      <img src="heidi9.jpeg" alt="Heidi Image 9 ">
+      <img src="heidi10.jpeg" alt="Heidi Image 10">
+      <img src="heidi11.jpeg" alt="Heidi Image 11">
+      <img src="heidi12.jpeg" alt="Heidi Image 12">
+      <img src="heidi13.jpeg" alt="Heidi Image 13">
+      <img src="heidi15.jpeg" alt="Heidi Image 14">
+      <img src="heidi14.jpeg" alt="Heidi Image 15">
+    </div>
+    
+  </section>
+
+  <footer>
+    <p>Made By KONETISETTY PRASANNA</p>
+  </footer>
+  <script>
+    function toggleAbout() {
+      const aboutDiv = document.getElementById("aboutHeidi");
+      if (aboutDiv.style.display === "block") {
+        aboutDiv.style.display = "none";
+      } else {
+        aboutDiv.style.display = "block";
+      }
+    }
+
+      
+  const galleryImages = document.querySelectorAll('.gallery img');
+const modal = document.createElement('div');
+modal.classList.add('modal');
+modal.innerHTML = '<span class="close-btn">&times;</span><img src="">';
+document.body.appendChild(modal);
+const modalImg = modal.querySelector('img');
+const closeBtn = modal.querySelector('.close-btn');
+
+galleryImages.forEach(img => {
+  img.addEventListener('click', () => {
+    modalImg.src = img.src;
+    modal.classList.add('active');
+  });
+});
+
+closeBtn.addEventListener('click', () => {
+  modal.classList.remove('active');
+});
+
+
+
+  
+  </script>
+  
+</body>
+</html>
